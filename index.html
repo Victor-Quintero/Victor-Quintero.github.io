@@ -6,16 +6,23 @@
     <title>Test Page: Don't Panic</title>
     <style>
         /* GLOBAL STYLES */
-     
+        
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            font-size: 7vw;
+            margin-top: 0;
+        }
 
         a{
-            color: red;
+            color: #f00;
         }
 
-        div{
-            border: 1px solid green;
-        }
         
+            
        
 
        /* .bio-box a { 
@@ -30,18 +37,44 @@
        
         /* BIO STYLES */
        
-        div.bio-box{
-            border: 1px solid black;                    
-                }
+        .bio-box{
+            border: 1px solid #000;   
+            width: 50%;  
+            font-size: 1rem; 
+            
+        }
+
+        .bio-box h3{
+            font-size: 1.5em;
+        }
 
         .bio-copy a{
-            color: green;
+            color: green;;
         }
-        
+
+        .bio-copy{
+            font-size: 1em;
+           
+        }
+
+         .bio-wrapper{
+            /* width: 500px; */
+                /* div that will be the parent of the other four bio-divs, used to set the absolute size to which the relative sizing of the bio divs will be based upon */
+                font-size: 24px; 
+         }
         /* SOCIAL STYLES  */
 
         .social-link{
-            color: blue;
+            background-color: rgba(150, 150, 150, 0.5);
+            color: rgb(0, 0, 255)
+        }
+
+        /* HERO STYLES */
+
+        .full-hero{
+            background-color: #c7dbfc;
+            height:50vh;
+            
         }
 
 
@@ -50,20 +83,25 @@
 </head>
 
 <body>
+<div class="full-hero hero-home">
+
     <h1>I'm an h1</h1>
 
     <ul>
         <li>
-            <a id="bio-item" href="https://example.com/">Link</a>
+            <a href="https://example.com/" class="social-link">Link</a>
         </li>
         <li>
-            <a href="https://example.com/">Link</a>
+            <a href="https://example.com/" class="social-link">Link</a>
         </li>
         <li>
-            <a href="https://example.com/">Link</a>
+            <a href="https://example.com/" class="social-link">Link</a>
         </li>        
     </ul>
+</div>
     <h2>I'm an h2</h2>
+
+    <div class="bio-wrapper">
 
     <div class="bio-box"> 
         <h3>Michael Hartl</h3>
@@ -94,9 +132,12 @@
     </div>
     <div class="bio-box">
         <h3>??</h3>
-        <p>
-            The Future
-        </p>
+        <div class="bio-copy">
+            <p>
+                The Future
+            </p>
+        </div>
+    </div>
     </div>
 </body>
 </html>
